@@ -49,7 +49,7 @@ cask "bitty" do
   url "https://github.com/0x96f/bitty/releases/download/v#{version}/Bitty-macos.zip",
       using: BittyReleaseDownloadStrategy
   name "Bitty"
-  desc "macOS terminal with tabs and split panes"
+  desc "A tiny terminal that does just enough"
   homepage "https://github.com/0x96f/bitty"
 
   depends_on macos: :sequoia
