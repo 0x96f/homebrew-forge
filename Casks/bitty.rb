@@ -43,8 +43,8 @@ class BittyReleaseDownloadStrategy < CurlDownloadStrategy
 end
 
 cask "bitty" do
-  version "0.1.7"
-  sha256 "772a91a8d7186f95c7fc17bb787bc01425e4f98620db28cb9e80e4140a789905"
+  version "0.2.0"
+  sha256 "c96d33f36903c6ca4e51b9328c21bc0ae9c0fa535cf6f0beb303f12ef18689e0"
 
   url "https://github.com/0x96f/bitty/releases/download/v#{version}/Bitty-macos.zip",
       using: BittyReleaseDownloadStrategy
