@@ -1,6 +1,6 @@
 cask "bitty" do
-  version "0.3.3"
-  sha256 "45f5ce559ac827b6093793edc7593167175799cc9562ece07bdcad4092d4a0d5"
+  version "0.4.1"
+  sha256 "706dd8df9f89eeb8aafd833388bb6b1eb207ac6513b41732a62379be2d92b504"
 
   url "https://github.com/0x96f/bitty-releases/releases/download/v#{version}/Bitty-macos.zip"
   name "Bitty"
