@@ -13,7 +13,7 @@ class BittyReleaseDownloadStrategy < CurlDownloadStrategy
       raise CurlDownloadStrategyError.new(url, "Set HOMEBREW_GITHUB_API_TOKEN or authenticate with gh.")
     end
 
-    release = GitHub.get_release("0x96f", "bitty", @tag)
+    release = GitHub.get_release("0x96f", "bitty-releases", @tag)
     filename = "Bitty-macos.zip"
     asset = release.fetch("assets").find { |entry| entry.fetch("name") == filename }
     raise CurlDownloadStrategyError.new(url, "#{filename} is missing from #{@tag}.") unless asset
@@ -46,11 +46,11 @@ cask "bitty" do
   version "0.3.1"
   sha256 "dfbadabdbf138c521c1d908c93a69c80e461280160ad09d813207a61af71d822"
 
-  url "https://github.com/0x96f/bitty/releases/download/v#{version}/Bitty-macos.zip",
+  url "https://github.com/0x96f/bitty-releases/releases/download/v#{version}/Bitty-macos.zip",
       using: BittyReleaseDownloadStrategy
   name "Bitty"
   desc "A tiny terminal that does just enough"
-  homepage "https://github.com/0x96f/bitty"
+  homepage "https://github.com/0x96f/bitty-releases"
 
   depends_on macos: :sequoia
 
